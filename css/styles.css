@@ -1,0 +1,152 @@
+:root {
+    --background: #fae3e3;
+    --foreground: #333232;
+    --highlight: #a167a5;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Redaction 10", serif;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+section {
+    padding: 20px 0 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border: 1px solid var(--foreground);
+    border-radius: 4px;
+    margin: 4px;
+
+    a {
+        text-decoration: none;
+        color: var(--highlight);
+        font-weight: bold;
+    }
+}
+
+video {
+    width: 100%;
+}
+
+footer {
+    font-size: 12px;
+    opacity: 70%;
+    margin: auto 0 12px;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media (width >= 600px) {
+    #product-list-container {
+        display: flex;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    #product-list {
+        width: 50%;
+    }
+}
+
+#product-list-container {
+    margin-top: 20px;
+}
+
+#product-list {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    p {
+        margin: 8px;
+        text-align: right;
+    }
+}
+
+#staff-highlights {
+    ul {
+        text-align: left;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 32px auto;
+    text-align: left;
+    border-radius: 4px;
+
+    fieldset {
+        padding: 12px;
+        margin: 12px 0;
+        border-radius: 4px;
+        border: 1px solid var(--foreground);
+    }
+    input,
+    textarea {
+        margin-bottom: 12px;
+    }
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    label {
+        display: block;
+        font-size: 12px;
+    }
+    button {
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        padding: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: var(--highlight);
+        border: none;
+        border-radius: 4px;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+#form-radio-group {
+    input {
+        margin-bottom: 8px;
+    }
+    label {
+        display: block;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>North Star Bakery</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Redaction+10:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <header>
+            <img
+                height="100"
+                width="100"
+                src="images/bakery-logo_c.png"
+                alt="Logo for north star bakery"
+            />
+            <h1>Contact Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form action="/contact" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required />
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required />
+                </fieldset>
+
+                <fieldset>
+                    <legend>Request Information</legend>
+
+                    <label for="date">Pickup Date</label>
+                    <input type="date" name="date" />
+
+                    <fieldset id="form-radio-group">
+                        <legend>Request Type</legend>
+
+                        <label>
+                            <input type="radio" name="request" value="pickup" /> Place a pickup
+                            order
+                        </label>
+
+                        <label>
+                            <input type="radio" name="request" value="application" /> Apply for a
+                            job
+                        </label>
+
+                        <label>
+                            <input type="radio" name="request" value="general" /> General
+                            information
+                        </label>
+                    </fieldset>
+
+                    <label for="details">Item Details</label>
+                    <textarea name="details"></textarea>
+
+                    <label for="details">Allergy Notes (if applicable)</label>
+                    <textarea name="details"></textarea>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>Located at 123 Anytown USA</p>
+            <p>Hours of Operation: 6am to 5pm daily</p>
+        </footer>
+    </body>
+</html>
