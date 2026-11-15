@@ -11,15 +11,21 @@
             rel="stylesheet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="js/theme.js" defer></script>
+        <script src="js/form-validator.js" defer></script>
+        <script src="js/pickup-toggle.js" defer></script>
     </head>
     <body>
         <header>
-            <img
-                height="100"
-                width="100"
-                src="images/bakery-logo_c.png"
-                alt="Logo for north star bakery"
-            />
+            <div id="top-bar-container">
+                <img
+                    height="100"
+                    width="100"
+                    src="images/bakery-logo_c.png"
+                    alt="Logo for north star bakery"
+                />
+                <button id="theme-switcher">Dark Mode</button>
+            </div>
             <h1>Contact Us</h1>
             <nav>
                 <ul>
@@ -32,43 +38,45 @@
         </header>
 
         <main>
-            <form action="/contact" method="post">
+            <form action="#" novalidate>
                 <fieldset>
                     <legend>Contact Information</legend>
                     <label for="name">Name</label>
-                    <input type="text" name="name" required />
+                    <input type="text" name="name" />
+                    <span class="error-message" id="name-error"></span>
 
                     <label for="email">Email</label>
-                    <input type="email" name="email" required />
+                    <input type="email" name="email" />
+                    <span class="error-message" id="email-error"></span>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Request Information</legend>
+                <fieldset id="form-radio-group">
+                    <legend>Request Type</legend>
+
+                    <label>
+                        <input id="pickup-radio" type="radio" name="request" value="pickup" /> Place
+                        a pickup order
+                    </label>
+
+                    <label>
+                        <input type="radio" name="request" value="application" /> Apply for a job
+                    </label>
+
+                    <label>
+                        <input type="radio" name="request" value="general" /> General information
+                    </label>
+                </fieldset>
+
+                <fieldset id="pickup-information-section">
+                    <legend>Pickup Information</legend>
 
                     <label for="date">Pickup Date</label>
                     <input type="date" name="date" />
-
-                    <fieldset id="form-radio-group">
-                        <legend>Request Type</legend>
-
-                        <label>
-                            <input type="radio" name="request" value="pickup" /> Place a pickup
-                            order
-                        </label>
-
-                        <label>
-                            <input type="radio" name="request" value="application" /> Apply for a
-                            job
-                        </label>
-
-                        <label>
-                            <input type="radio" name="request" value="general" /> General
-                            information
-                        </label>
-                    </fieldset>
+                    <span class="error-message" id="date-error"></span>
 
                     <label for="details">Item Details</label>
                     <textarea name="details"></textarea>
+                    <span class="error-message" id="details-error"></span>
 
                     <label for="details">Allergy Notes (if applicable)</label>
                     <textarea name="details"></textarea>
