@@ -43,6 +43,5 @@ function saveSelectedTheme(theme) {
 
 // Updates switch text based on the passed in active theme
 function updateSwitchTextContent(theme) {
-    console.log(theme);
     themeSwitch.textContent = switchLabelMap[theme];
 }
